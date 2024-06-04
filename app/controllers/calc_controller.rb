@@ -48,4 +48,13 @@ class CalcController > ApplicationController
   def random_new
     render({ :template => "pages_templates/random_new"})
   end
+
+  def random_results
+    @user_min = params.fetch("user_min").to_f
+  @user_max = params.fetch("user_max").to_f
+
+  @random_num = rand(@user_min..@user_max).round(15)
+
+  render({ :templates => "pages_templates/random_results"})
+  end
 end

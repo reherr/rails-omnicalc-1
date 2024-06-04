@@ -9,5 +9,8 @@ class CalcController > ApplicationController
 
     render({ :template => "pages_templates/square_results"})
   end
-    
+   
+  def new_squareroot 
+    render({ :template => "pages_templates/new_squareroot"})
+  end
 end

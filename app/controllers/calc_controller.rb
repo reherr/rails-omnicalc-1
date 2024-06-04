@@ -44,4 +44,8 @@ class CalcController > ApplicationController
  
     render({ :template => "pages_templates/payment_results"})
   end
+
+  def random_new
+    render({ :template => "pages_templates/random_new"})
+  end
 end

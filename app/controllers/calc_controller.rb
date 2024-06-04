@@ -24,4 +24,24 @@ class CalcController > ApplicationController
   def payment_new
     render({ :template => "pages_templates/payment_new"})
   end
+
+  def payment_results
+    @apr = params.fetch("user_apr").to_f
+  
+    @user_apr = params.fetch("user_apr").to_f / 100
+    
+  
+    @years_input = params.fetch("user_years").to_f
+    
+    @principal_input = params.fetch("user_pv").to_f
+    
+    
+  
+    @monthly_rate = @user_apr / 12
+    @total_payments = @years_input * 12
+  
+    @monthly_payment = @principal_input * (@monthly_rate / (1 - (1 + @monthly_rate)**(-@total_payments)))
+ 
+    render({ :template => "pages_templates/payment_results"})
+  end
 end

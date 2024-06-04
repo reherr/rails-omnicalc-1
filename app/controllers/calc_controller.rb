@@ -21,4 +21,7 @@ class CalcController > ApplicationController
     render({ :template => "pages_templates/squareroot_results"})
   end
 
+  def payment_new
+    render({ :template => "pages_templates/payment_new"})
+  end
 end

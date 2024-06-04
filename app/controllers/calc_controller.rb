@@ -1,4 +1,4 @@
-class CalcController > ApplicationController
+class CalcController < ApplicationController
   def new_square
     render({ :template => "pages_templates/new_square"})
   end

@@ -55,6 +55,6 @@ class CalcController < ApplicationController
 
   @random_num = rand(@user_min..@user_max).round(15)
 
-  render({ :templates => "pages_templates/random_results"})
+  render({ :template => "pages_templates/random_results"})
   end
 end
